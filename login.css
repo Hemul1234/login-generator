@@ -1,0 +1,74 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window {
+    width: 70%;
+    height: 70%;
+    border: 2px solid blue;
+    border-radius: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.question {
+    font-family: "Roboto", sans-serif;
+    font-size: 5vh;
+    font-weight: 700;
+    color: blue;
+}
+
+.form {
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-around;
+    padding: 1%;
+    border-radius: 5vh;
+    font-family: "Roboto", sans-serif;
+    font-size: 4vh;
+}
+
+.option {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.select {
+    padding: 1% 2%;
+    border: 2px solid blue;
+    border-radius: 3vh;
+}
+
+.input {
+    width: 40%;
+    padding: 1% 2%;
+    border: 2px solid blue;
+    border-radius: 3vh;
+}
+
+.button {
+    height: 25%;
+    padding: 1% 2%;
+    border: 2px solid blue;
+    border-radius: 3vh;
+    font-family: "Roboto", sans-serif;
+    font-size: 4vh;
+}
+
+.result {
+    height: 10%;
+    padding: 1% 2%;
+    font-family: "Roboto", sans-serif;
+    font-size: 4vh;
+}
