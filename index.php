@@ -47,7 +47,7 @@
             </p>
             <p class="option">
                 <label>Обязательные символы</label>
-                <input class="input" name="symbols" maxlength="<?=$i?>" value="<?php if (isset($_POST['symbols'])) {echo $_POST['symbols'];} else {echo '';} ?>">
+                <input class="input" name="symbols" value="<?php if (isset($_POST['symbols'])) {echo $_POST['symbols'];} else {echo '';} ?>">
             </p>
             <input class="button" type="submit">
 		</form>
@@ -57,5 +57,19 @@
             }
         ?></p>
     </main>
+    <script>
+        let select = document.querySelector('.select');
+        let input = document.querySelector('.input');
+        function limitLength() {
+            let maxLength = parseInt(select.value, 10);
+            if (input.value.length > maxLength) {
+                input.value = input.value.slice(0, maxLength);
+            }
+            input.maxLength = maxLength;
+        }
+        input.addEventListener('input', limitLength);
+        select.addEventListener('change', limitLength);
+        limitLength();
+    </script>
 </body>
 </html>
