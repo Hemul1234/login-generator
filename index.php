@@ -21,7 +21,11 @@
         $quantity = $len - count($requiredSymbolsArr);
         $randomSymbolsArr = getRandomSymbols(mt_rand(0, 1), $quantity, $requiredSymbolsArr);
         for ($i = count($requiredSymbolsArr); $i > 0; $i--) {
-            array_splice($randomSymbolsArr, array_rand($randomSymbolsArr ? $randomSymbolsArr : $requiredSymbolsArr), 0, array_splice($requiredSymbolsArr, array_rand($requiredSymbolsArr), 1));
+            array_splice(
+                $randomSymbolsArr,
+                array_rand($randomSymbolsArr ? $randomSymbolsArr : $requiredSymbolsArr),
+                0,
+                array_splice($requiredSymbolsArr, array_rand($requiredSymbolsArr), 1));
         }
         return implode('', $randomSymbolsArr);
 	}
